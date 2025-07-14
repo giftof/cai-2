@@ -31,8 +31,6 @@ def to_float(user_input: str) -> float:
 
 def power(n: float, e: int) -> float:
     result = 1.0
-    if e == 0:
-        return result
     abs_exponent = abs(e)
     for _ in range(abs_exponent):
         result *= n
@@ -43,7 +41,7 @@ def main():
     exponent = input('Enter exponent: ')
     pow = power(to_float(number), to_int(exponent))
     print(f'Result: {pow}')
-    print(f'Compare: {to_float(number) ** to_int(exponent)}')
+    # print(f'Compare: {to_float(number) ** to_int(exponent)}')
 
 if __name__ == "__main__":
     main()
